@@ -192,6 +192,7 @@ body {
 
 .nav_cont {
   height: 4em;
+  position: relative;
   overflow: hidden;
 }
 
@@ -201,8 +202,7 @@ body {
   position: relative;
   transition: 900ms ease;
   transform: translate(0%, 100%);
-  /* border: solid 1px #fff; */
-  /* margin-bottom: 0.1em; */
+  position: absolute;
 }
 
 @keyframes linkreveal {
