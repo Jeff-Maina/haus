@@ -11,9 +11,9 @@ const NavBar = () => {
     <>
       {" "}
       <nav className="w-full h-28 flex items-end">
-        <div className="w-full h-2/4 flex justify-between px-14">
+        <div className="w-full h-2/4 flex justify-between">
           <div className="h-full w-40 flex items-center">
-            <h1 className="text-3xl font-montserrat font-bold text-black cursor-pointer tracking-widest">
+            <h1 className="text-2xl font-montserrat font-bold text-black cursor-pointer tracking-widest">
               HAFH
             </h1>
           </div>
@@ -56,13 +56,13 @@ const NavBar = () => {
       </nav>
       <div
         id="mask-screen"
-        className={`absolute w-screen h-screen top-0 left-0 menu-mask ${maskClass}`}
+        className={`fixed w-screen h-screen top-0 left-0 menu-mask ${maskClass}`}
         onClick={() => {
           setMenuAtive(false);
         }}
       ></div>
       <div
-        className={`absolute h-screen w-5/12 min-w-max right-0 z-40 bg-black top-0 ${menuClass} flex flex-col justify-center`}
+        className={`fixed h-screen w-5/12 min-w-max right-0 z-[300] bg-black top-0 ${menuClass} flex flex-col justify-center`}
       >
         <div className="w-full h-56 flex items-center justify-center px-10">
           <input

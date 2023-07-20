@@ -24,8 +24,12 @@ body {
   padding: 0;
   background-color: #fff;
   overflow-x: hidden;
+  position: relative;
 }
 
+body::-webkit-scrollbar{
+display: none;
+}
 /* Navbar */
 
 #other-hafh {
@@ -105,8 +109,10 @@ body {
 }
 
 .mask-active {
+  position: fixed;
   background-color: rgba(0, 0, 0, 0.662);
   animation: maskfade 700ms ease-in-out 1 forwards;
+  z-index: 250;
 }
 
 .mask-inactive {
@@ -161,29 +167,28 @@ body {
 }
 
 .menu-active .nav_one {
-  animation-delay: .1s !important;
+  animation-delay: 0.1s !important;
 }
 .menu-active .nav_two {
-  animation-delay: .2s !important;
+  animation-delay: 0.2s !important;
 }
 .menu-active .nav_three {
-  animation-delay: .3s !important;
+  animation-delay: 0.3s !important;
 }
 .menu-active .nav_four {
-  animation-delay: .4s !important;
+  animation-delay: 0.4s !important;
 }
 .menu-active .nav_five {
-  animation-delay: .5s !important;
+  animation-delay: 0.5s !important;
 }
 .menu-active .nav_six {
-  animation-delay: .6s !important;
-} 
+  animation-delay: 0.6s !important;
+}
 
 .menu-active .special-link {
   color: #b7864c;
   animation-delay: 0.7s !important;
 }
-
 
 .menu-inactive {
   transform: translate(100%, 0%);
@@ -278,4 +283,34 @@ body {
 
 input {
   outline: none;
+}
+
+.image-card {
+  aspect-ratio: 1/1.3;
+  border-radius: 10px;
+  transition: all 300ms ease;
+}
+
+.image-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10em;
+  background-image: linear-gradient(to top, #000000bb, transparent);
+}
+
+.image-grid:has(.image-card:hover) .image-card:not(.image-card:hover) {
+  scale: 0.96;
+  opacity: 0.6;
+}
+
+.blur-container {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.568),rgba(255, 255, 255, 0.346), transparent);
+}
+
+
+::placeholder{
+  font-size: 14px;
+  color: rgb(154, 150, 150) !important;
 }
