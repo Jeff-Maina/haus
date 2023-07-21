@@ -35,7 +35,7 @@ const NavBar = () => {
                 The Other HAFH
               </h2>
             </div>
-            <div className="h-14 w-14 bg-black rounded-full cursor-pointer menu-btn flex items-center justify-center">
+            <div className="h-14 w-14 bg-black rounded-full cursor-pointer menu-btn flex items-center justify-center ">
               <input
                 onClick={() => {
                   setMenuAtive(!isMenuActive);
@@ -45,7 +45,7 @@ const NavBar = () => {
               />
               <div
                 id="ham-container"
-                className="w-2/4 h-4/5 flex flex-col justify-center items-center"
+                className="w-2/4 h-4/5 flex flex-col justify-center items-center "
               >
                 <span className="w-full h-[2px] bg-black"></span>
                 <span className="w-full h-[2px] bg-black mt-1"></span>
