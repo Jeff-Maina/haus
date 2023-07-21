@@ -328,7 +328,7 @@ input {
 }
 
 .footer-button:hover {
-  transform: scale(0.9);
+  transform: scale(0.9) !important;
 }
 
 .text-top,
