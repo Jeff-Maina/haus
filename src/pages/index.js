@@ -74,7 +74,7 @@ export default function Home() {
 
           <section className="h-44 w-full items-end flex justify-between">
             <div className="relative">
-              <h1 data-scroll className="text-[5rem] font-wulkanMedium p-0">
+              <h1 className="text-[5rem] font-wulkanMedium p-0">
                 Hotels
               </h1>
               <h1 className="absolute font-wulkanSemibold text-[1.9rem] font-extralight top-0 -right-12">
@@ -85,8 +85,7 @@ export default function Home() {
           <sectior className="w-full h-auto grid lg:grid-cols-3 md:grid-cols-2 gap-10 image-grid mt-10">
             {hotels.map((hotel, index) => (
               <div
-                data-scroll
-                data-scroll-speed="0.5"
+
                 className="w-full image-card rounded-md overflow-hidden relative"
               >
                 <img
@@ -96,8 +95,7 @@ export default function Home() {
                 />
                 <div className="w-full absolute bottom-0 h-20 flex items-center pl-6 pointer-events-none">
                   <h1
-                    data-scroll
-                    data-scroll-speed=".2"
+
                     className="font-montserrat uppercase text-lg text-white z-10 relative border-r-2 pr-3 border-white"
                   >
                     {hotel.name}
@@ -110,7 +108,7 @@ export default function Home() {
             ))}
           </sectior>
         </div>
-        <div className="w-full  blur-container flex justify-center h-20 my-36 mb-6">
+        <div className="w-full sticky bottom-[0em]  blur-container flex justify-center h-20 my-36 mb-6">
           {/*  //!Should be sticky!! for some reason it's not working,locomotive scroll's styles overwriting the sticky property perhaps??????who knows */}
           <div className="w-96 h-16 min-w-[23rem] rounded-full bg-[#222]  -translate-y-2 z-50 grid place-items-center p-4">
             <input
@@ -126,15 +124,13 @@ export default function Home() {
             <div className="w-full lg:h-full h-2/4 grid place-items-center">
               <div className="flex flex-col items-center">
                 <h1
-                  data-scroll
-                  data-scroll-speed="2"
+
                   className="text-white font-wulkanSemibold lg:text-[4rem] text-[2.5rem]"
                 >
                   Stay in the know
                 </h1>
                 <button
-                  data-scroll
-                  data-scroll-speed="2"
+
                   className="bg-white lg:w-72 lg:h-14 relative grid place-items-center rounded-full p-3 px-10 button text-md mt-8 font-montserrat footer-button overflow-hidden"
                 >
                   <div className="w-40 h-6 overflow-hidden relative grid place-items-center">
@@ -147,15 +143,13 @@ export default function Home() {
             <div className="w-full lg:h-full h-2/4 lg:border-l border-t border-zinc-500 grid place-items-center">
               <div className="flex flex-col items-center">
                 <h1
-                  data-scroll
-                  data-scroll-speed="2"
+
                   className="text-white font-wulkanSemibold lg:text-[4rem] text-[2.5rem]"
                 >
                   Get in touch
                 </h1>
                 <button
-                  data-scroll
-                  data-scroll-speed="2"
+
                   className="bg-white lg:w-72 lg:h-14 relative grid place-items-center rounded-full p-3 px-10 button text-md mt-8 font-montserrat footer-button overflow-hidden"
                 >
                   <div className="w-36 h-6 overflow-hidden relative grid place-items-center">

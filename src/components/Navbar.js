@@ -3,14 +3,14 @@ import { useState } from "react";
 const NavBar = () => {
   const [isMenuActive, setMenuAtive] = useState(false);
   const menuClass = isMenuActive === true ? "menu-active" : "menu-inactive";
-  const menuIconBg = isMenuActive === true ? "bg-white" : "bg-black";
+  const menuIconBg = isMenuActive === true ? "bg-white z-[400]" : "bg-black";
   const menuIconText = isMenuActive === true ? "text-black" : "text-white";
   let maskClass = isMenuActive === true ? "mask-active" : "mask-inactive";
 
   return (
     <>
       {" "}
-      <nav className="w-full h-28 flex items-end">
+      <nav className="w-full h-28 flex items-end relative z-[400]">
         <div className="w-full h-2/4 flex justify-between">
           <div className="h-full w-40 flex items-center">
             <h1 className="text-2xl font-montserrat font-bold text-black cursor-pointer tracking-widest">
