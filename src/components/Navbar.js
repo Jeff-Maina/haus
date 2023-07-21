@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const NavBar = () => {
+
   const [isMenuActive, setMenuAtive] = useState(false);
   const menuClass = isMenuActive === true ? "menu-active" : "menu-inactive";
   const menuIconBg = isMenuActive === true ? "bg-white z-[400]" : "bg-black";
@@ -10,7 +11,7 @@ const NavBar = () => {
   return (
     <>
       {" "}
-      <nav className="w-full h-28 flex items-end relative z-[400]">
+      <nav className="w-full h-28 md:px-14 px-6 flex items-end relative z-[400]">
         <div className="w-full h-2/4 flex justify-between">
           <div className="h-full w-40 flex items-center">
             <h1 className="text-2xl font-montserrat font-bold text-black cursor-pointer tracking-widest">
@@ -35,7 +36,9 @@ const NavBar = () => {
                 The Other HAFH
               </h2>
             </div>
-            <div className="h-14 w-14 bg-black rounded-full cursor-pointer menu-btn flex items-center justify-center ">
+            <div className="h-14 w-14 bg-black rounded-full cursor-pointer menu-btn flex items-center justify-center " onClick={()=>{
+            }}>
+
               <input
                 onClick={() => {
                   setMenuAtive(!isMenuActive);
@@ -44,6 +47,7 @@ const NavBar = () => {
                 id="menu-check"
               />
               <div
+
                 id="ham-container"
                 className="w-2/4 h-4/5 flex flex-col justify-center items-center "
               >
