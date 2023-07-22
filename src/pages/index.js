@@ -3,9 +3,7 @@ import { Hanken_Grotesk, Inter } from "next/font/google";
 import NavBar from "@/components/Navbar";
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { gsap } from "gsap-trial";
-import { ScrollTrigger } from "gsap-trial/dist/ScrollTrigger";
-import { ScrollSmoother } from "gsap-trial/dist/ScrollSmoother";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -69,17 +67,17 @@ export default function Home() {
 
   let [smoother, setSmoother] = useState();
 
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  // useEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-    let smoother = ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 2,
-      effects: true
-    });
-    setSmoother(smoother);
-  }, []);
+  //   let smoother = ScrollSmoother.create({
+  //     wrapper: "#smooth-wrapper",
+  //     content: "#smooth-content",
+  //     smooth: 2,
+  //     effects: true
+  //   });
+  //   setSmoother(smoother);
+  // }, []);
 
   return (
     <>
@@ -119,7 +117,7 @@ export default function Home() {
               ))}
             </sectior>
           </div>
-          <div className="w-full bottom-[0em]  blur-container flex justify-center h-20 my-36 mb-6">
+          <div className="w-full bottom-[0em] sticky  blur-container flex justify-center h-20 my-36 mb-6">
             {/*  //!Should be sticky!! for some reason it's not working,locomotive scroll's styles overwriting the sticky property perhaps??????who knows */}
             <div className="w-96 h-16 min-w-[23rem] rounded-full bg-[#222]  -translate-y-2 z-50 grid place-items-center p-4">
               <input
@@ -133,10 +131,14 @@ export default function Home() {
             <div className="w-full flex-grow lg:grid grid-cols-2">
               <div className="w-full lg:h-full h-2/4 grid place-items-center">
                 <div className="flex flex-col items-center">
-                  <h1 data-speed="1.2" className="text-white font-wulkanSemibold lg:text-[4rem] text-[2.5rem]">
+                  <h1 
+                  // data-speed="1.2"
+                   className="text-white font-wulkanSemibold lg:text-[4rem] text-[2.5rem]">
                     Stay in the know
                   </h1>
-                  <button data-speed="1.2" className="bg-white lg:w-72 lg:h-14 relative grid place-items-center rounded-full p-3 px-10 button text-md mt-8 font-montserrat footer-button overflow-hidden">
+                  <button
+                  //  data-speed="1.2"
+                    className="bg-white lg:w-72 lg:h-14 relative grid place-items-center rounded-full p-3 px-10 button text-md mt-8 font-montserrat footer-button overflow-hidden">
                     <div className="w-40 h-6 overflow-hidden relative grid place-items-center">
                       <h1 className="absolute text-top">Read our Substack</h1>
                       <h1 className="absolute text-bottom">
@@ -148,10 +150,14 @@ export default function Home() {
               </div>
               <div className="w-full lg:h-full h-2/4 lg:border-l border-t border-zinc-500 grid place-items-center">
                 <div className="flex flex-col items-center">
-                  <h1 data-speed="1.2" className="text-white font-wulkanSemibold lg:text-[4rem] text-[2.5rem]">
+                  <h1
+                  //  data-speed="1.2"
+                    className="text-white font-wulkanSemibold lg:text-[4rem] text-[2.5rem]">
                     Get in touch
                   </h1>
-                  <button data-speed="1.2" className="bg-white lg:w-72 lg:h-14 relative grid place-items-center rounded-full p-3 px-10 button text-md mt-8 font-montserrat footer-button overflow-hidden">
+                  <button
+                  //  data-speed="1.2"
+                    className="bg-white lg:w-72 lg:h-14 relative grid place-items-center rounded-full p-3 px-10 button text-md mt-8 font-montserrat footer-button overflow-hidden">
                     <div className="w-36 h-6 overflow-hidden relative grid place-items-center">
                       <h1 className="absolute text-top">Send us an Email</h1>
                       <h1 className="absolute text-bottom">Send us an Email</h1>
